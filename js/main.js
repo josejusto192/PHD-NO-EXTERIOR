@@ -204,16 +204,7 @@ function handleServiceGridLayout() {
 window.addEventListener('resize', handleServiceGridLayout, { passive: true });
 handleServiceGridLayout();
 
-// -------------------------------------------------------
-// Parallax subtle on hero
-// -------------------------------------------------------
-const heroBg = document.querySelector('.hero__bg');
-if (heroBg) {
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
-  }, { passive: true });
-}
+// Parallax removido — hero usa background-image fixo
 
 // -------------------------------------------------------
 // Numbers counter animation

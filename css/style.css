@@ -31,7 +31,7 @@
 
   /* Espaçamento */
   --section-py: 100px;
-  --container:  1200px;
+  --container:  1280px;
   --radius:     8px;
   --radius-lg:  16px;
 
@@ -330,30 +330,41 @@ p  { font-size: 1rem; line-height: 1.8; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
+  padding: 180px 0 140px;
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
+  background-image: url('https://wmvubil4ztro699m.public.blob.vercel-storage.com/PHD-2.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* Overlay sobre a imagem */
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background:
-    radial-gradient(ellipse at 70% 30%, rgba(64,79,122,0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(219,197,148,0.08) 0%, transparent 50%);
+    linear-gradient(90deg, rgba(20,33,77,0.92) 0%, rgba(20,33,77,0.85) 45%, rgba(20,33,77,0.55) 100%),
+    linear-gradient(180deg, rgba(20,33,77,0.3) 0%, rgba(20,33,77,0.1) 50%, rgba(20,33,77,0.5) 100%);
 }
 
 /* Padrão sutil de fundo */
 .hero__pattern {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(219,197,148,0.06) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(219,197,148,0.04) 1px, transparent 1px);
   background-size: 40px 40px;
-  opacity: 0.5;
+  z-index: 1;
 }
 
 .hero__content {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
+  z-index: 2;
+  max-width: 760px;
 }
 
 .hero__badge {
@@ -1812,7 +1823,7 @@ p  { font-size: 1rem; line-height: 1.8; }
 
   .nav__mobile-menu a:hover { color: var(--gold); }
 
-  .hero { padding: 120px 0 60px; min-height: auto; }
+  .hero { padding: 140px 0 100px; min-height: auto; }
 
   .videos-grid { grid-template-columns: 1fr; }
 
