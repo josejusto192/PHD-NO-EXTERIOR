@@ -327,10 +327,10 @@ p  { font-size: 1rem; line-height: 1.8; }
   min-height: 100vh;
   background: var(--navy);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
-  padding: 180px 0 140px;
+  padding: 160px 0 120px;
 }
 
 .hero__bg {
@@ -338,18 +338,8 @@ p  { font-size: 1rem; line-height: 1.8; }
   inset: 0;
   background-image: url('https://wmvubil4ztro699m.public.blob.vercel-storage.com/PHD-2.png');
   background-size: cover;
-  background-position: center right;
+  background-position: center top;
   background-repeat: no-repeat;
-}
-
-/* Overlay sobre a imagem */
-.hero__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(20,33,77,0.92) 0%, rgba(20,33,77,0.85) 45%, rgba(20,33,77,0.55) 100%),
-    linear-gradient(180deg, rgba(20,33,77,0.3) 0%, rgba(20,33,77,0.1) 50%, rgba(20,33,77,0.5) 100%);
 }
 
 /* Padrão sutil de fundo */
@@ -1823,7 +1813,7 @@ p  { font-size: 1rem; line-height: 1.8; }
 
   .nav__mobile-menu a:hover { color: var(--gold); }
 
-  .hero { padding: 140px 0 100px; min-height: auto; }
+  .hero { padding: 120px 0 80px; min-height: auto; align-items: flex-start; }
 
   .videos-grid { grid-template-columns: 1fr; }
 
