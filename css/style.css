@@ -493,8 +493,32 @@ p  { font-size: 1rem; line-height: 1.8; }
 }
 
 .opp-card__icon {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  background: rgba(20,33,77,0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.opp-card__icon svg {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  stroke: var(--navy);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.opp-card--featured .opp-card__icon {
+  background: rgba(219,197,148,0.18);
+}
+.opp-card--featured .opp-card__icon svg {
+  stroke: var(--gold);
 }
 
 .opp-card__title {
@@ -654,6 +678,28 @@ p  { font-size: 1rem; line-height: 1.8; }
   line-height: 1;
   margin-bottom: 12px;
 }
+.why-card__icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  background: rgba(20,33,77,0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.why-card__icon svg {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  stroke: var(--navy);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 .why-card h3 {
   font-size: 1.1rem;
@@ -706,8 +752,26 @@ p  { font-size: 1rem; line-height: 1.8; }
 }
 
 .profile-card__icon {
-  font-size: 2.5rem;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  max-width: 52px;
+  background: rgba(219,197,148,0.15);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
+}
+.profile-card__icon svg {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  max-width: 26px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .profile-card h3 {
@@ -772,8 +836,26 @@ p  { font-size: 1rem; line-height: 1.8; }
 }
 
 .service-card__icon {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  background: rgba(219,197,148,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.service-card__icon svg {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .service-card__header h3 {
@@ -1457,6 +1539,8 @@ p  { font-size: 1rem; line-height: 1.8; }
 .blog-card__image-placeholder svg {
   width: 56px;
   height: 56px;
+  min-width: 56px;
+  max-width: 56px;
   stroke: rgba(255,255,255,0.55);
   fill: none;
   stroke-linecap: round;
