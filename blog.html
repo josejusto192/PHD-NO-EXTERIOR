@@ -56,7 +56,7 @@
   </section>
 
   <!-- ARTIGOS EM DESTAQUE -->
-  <section class="section section--white">
+  <section class="section section--white pb-0">
     <div class="container">
       <div class="section-header" data-reveal>
         <span class="eyebrow">Artigos em Destaque</span>
@@ -64,29 +64,97 @@
         <div class="divider"></div>
       </div>
 
-      <!-- Artigo destaque (grande) -->
-      <div style="background:var(--navy);border-radius:16px;overflow:hidden;margin-bottom:48px;display:grid;grid-template-columns:1fr 1fr;min-height:360px;" data-reveal>
-        <div style="padding:48px;display:flex;flex-direction:column;justify-content:center;">
-          <span style="display:inline-block;background:rgba(219,197,148,0.2);color:var(--gold);font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:20px;">Em Destaque</span>
-          <h2 style="color:var(--white);font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:16px;line-height:1.3;">Investimento em Pesquisa: Brasil x Exterior — O que os números revelam?</h2>
-          <p style="color:var(--text-muted);margin-bottom:28px;font-size:0.95rem;">Entenda por que as universidades internacionais têm mais recursos, como isso impacta os programas de bolsas e o que isso significa para a sua candidatura.</p>
-          <div style="display:flex;align-items:center;gap:16px;">
-            <span style="font-size:0.8rem;color:rgba(255,255,255,0.4);">12 de Março, 2026</span>
-            <a href="#" style="color:var(--gold);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Leia o artigo →</a>
+      <!-- Slider de Destaques -->
+      <div class="featured-slider-container" data-reveal>
+        <div class="featured-slider">
+          <!-- Slide 1 -->
+          <div class="featured-slide active">
+            <div class="featured-content">
+              <span class="tag">Em Destaque</span>
+              <h2>Investimento em Pesquisa: Brasil x Exterior — O que os números revelam?</h2>
+              <p>Entenda por que as universidades internacionais têm mais recursos, como isso impacta os programas de bolsas e o que isso significa para a sua candidatura.</p>
+              <div class="featured-meta">
+                <span>12 de Março, 2026</span>
+                <a href="#">Leia o artigo →</a>
+              </div>
+            </div>
+            <div class="featured-image">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b6aee?auto=format&fit=crop&w=900&q=80" alt="Livros e pesquisa acadêmica" />
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="featured-slide">
+            <div class="featured-content">
+              <span class="tag">Tendências</span>
+              <h2>O Impacto da IA nas Pesquisas de Doutorado e Mestrado</h2>
+              <p>Como a Inteligência Artificial está remodelando o futuro das publicações científicas e quais ferramentas você deve conhecer antes de iniciar seu doutorado.</p>
+              <div class="featured-meta">
+                <span>10 de Março, 2026</span>
+                <a href="#">Leia o artigo →</a>
+              </div>
+            </div>
+            <div class="featured-image">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" alt="Desempenho acadêmico" />
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="featured-slide">
+            <div class="featured-content">
+              <span class="tag">Bolsas</span>
+              <h2>Bolsas Full-Ride na Europa: O Caminho das Pedras</h2>
+              <p>Descubra os principais programas de financiamento integral na União Europeia e como preparar sua aplicação.</p>
+              <div class="featured-meta">
+                <span>8 de Março, 2026</span>
+                <a href="#">Leia o artigo →</a>
+              </div>
+            </div>
+            <div class="featured-image">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=80" alt="Universidade Europeia" />
+            </div>
           </div>
         </div>
-        <div style="overflow:hidden;">
-          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b6aee?auto=format&fit=crop&w=900&q=80"
-               alt="Livros e pesquisa acadêmica"
-               style="width:100%;height:100%;object-fit:cover;display:block;"/>
+        <!-- Controles do Slider -->
+        <button class="slider-btn prev" aria-label="Anterior">‹</button>
+        <button class="slider-btn next" aria-label="Próximo">›</button>
+        <div class="slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTROS E GRID DE ARTIGOS -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section-header text-center" data-reveal>
+        <h2>Explore Todo o Conteúdo</h2>
+        <div class="divider" style="margin-left:auto;margin-right:auto;"></div>
+      </div>
+
+      <!-- Controles: Busca e Filtros -->
+      <div class="blog-controls" data-reveal>
+        <div class="blog-search-wrapper">
+          <input type="text" id="searchInput" placeholder="Buscar por título ou assunto..." />
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        </div>
+        <div class="blog-filters" id="filterContainer">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="guia-inicial">Guia Inicial</button>
+          <button class="filter-btn" data-filter="bolsas">Bolsas</button>
+          <button class="filter-btn" data-filter="documentos">Documentos</button>
+          <button class="filter-btn" data-filter="familia">Família</button>
+          <button class="filter-btn" data-filter="carreira">Carreira</button>
         </div>
       </div>
 
+      <!-- Resultados Info -->
+      <div id="resultsInfo" class="results-info" data-reveal style="display:none;">
+        Exibindo <span id="visibleCount">0</span> artigos
+      </div>
+
       <!-- Grid de artigos -->
-      <div class="blog-grid" data-reveal>
+      <div class="blog-grid" id="blogGrid" data-reveal>
 
         <!-- Artigo 1 -->
-        <div class="blog-card">
+        <div class="blog-card" data-category="guia-inicial">
           <div class="blog-card__image">
             <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="Campus universitário no exterior"/>
           </div>
@@ -96,105 +164,119 @@
             <p>Desvendamos o passo a passo para quem ainda não sabe por onde começar sua jornada rumo a uma universidade internacional com bolsa.</p>
             <div class="blog-card__footer">
               <span class="blog-card__date">5 Mar, 2026</span>
-              <a href="#" class="blog-card__link">
-                Leia mais
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
         <!-- Artigo 2 -->
-        <div class="blog-card">
+        <div class="blog-card" data-category="carreira">
           <div class="blog-card__image">
             <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Formatura e expansão acadêmica"/>
           </div>
           <div class="blog-card__body">
-            <span class="blog-card__category">Fuga de Cérebros</span>
-            <h3>Fuga de cérebros ou expansão de horizontes? Repensando a emigração qualificada brasileira</h3>
+            <span class="blog-card__category">Carreira</span>
+            <h3>Fuga de cérebros ou expansão de horizontes? Repensando a emigração qualificada</h3>
             <p>O debate sobre fuga de cérebros está ultrapassado. Saiba por que estudar fora pode ser o maior investimento no Brasil e na sua carreira.</p>
             <div class="blog-card__footer">
               <span class="blog-card__date">28 Fev, 2026</span>
-              <a href="#" class="blog-card__link">
-                Leia mais
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
         <!-- Artigo 3 -->
-        <div class="blog-card">
+        <div class="blog-card" data-category="bolsas">
           <div class="blog-card__image">
             <img src="https://images.unsplash.com/photo-1499856871958-5b9357676b62?auto=format&fit=crop&w=800&q=80" alt="Vida no exterior, cidade europeia"/>
           </div>
           <div class="blog-card__body">
             <span class="blog-card__category">Bolsas</span>
             <h3>É possível viver apenas com a bolsa de doutorado no exterior? A resposta honesta</h3>
-            <p>Analisamos os valores médios de bolsas nos EUA, Canadá e Europa e comparamos com o custo de vida real nas principais cidades universitárias.</p>
+            <p>Analisamos os valores médios de bolsas nos EUA, Canadá e Europa e comparamos com o custo de vida real nas principais cidades.</p>
             <div class="blog-card__footer">
               <span class="blog-card__date">20 Fev, 2026</span>
-              <a href="#" class="blog-card__link">
-                Leia mais
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
         <!-- Artigo 4 -->
-        <div class="blog-card">
+        <div class="blog-card" data-category="documentos">
           <div class="blog-card__image">
             <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Documentos de candidatura acadêmica"/>
           </div>
           <div class="blog-card__body">
             <span class="blog-card__category">Documentos</span>
-            <h3>Statement of Purpose vs. Statement of Intent: qual a diferença e como escrever cada um</h3>
-            <p>Os documentos que mais pesam na sua candidatura têm nomes parecidos, mas propósitos diferentes. Entenda como escrever cada um com impacto.</p>
+            <h3>Statement of Purpose vs. Statement of Intent: qual a diferença?</h3>
+            <p>Os documentos que mais pesam na sua candidatura têm nomes parecidos, mas propósitos diferentes. Entenda como escrever cada um.</p>
             <div class="blog-card__footer">
               <span class="blog-card__date">15 Fev, 2026</span>
-              <a href="#" class="blog-card__link">
-                Leia mais
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
         <!-- Artigo 5 -->
-        <div class="blog-card">
+        <div class="blog-card" data-category="familia">
           <div class="blog-card__image">
             <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=800&q=80" alt="Família no exterior"/>
           </div>
           <div class="blog-card__body">
             <span class="blog-card__category">Família</span>
             <h3>Posso levar minha família para o exterior? Tudo sobre visto de dependentes</h3>
-            <p>Cônjuge e filhos podem ir junto? Cônjuge pode trabalhar? Filhos podem estudar? Respondemos as principais dúvidas sobre levar a família.</p>
+            <p>Cônjuge e filhos podem ir junto? Cônjuge pode trabalhar? Respondemos as principais dúvidas sobre levar a família com você.</p>
             <div class="blog-card__footer">
               <span class="blog-card__date">8 Fev, 2026</span>
-              <a href="#" class="blog-card__link">
-                Leia mais
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
         <!-- Artigo 6 -->
-        <div class="blog-card">
+        <div class="blog-card" data-category="carreira">
           <div class="blog-card__image">
             <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80" alt="Carreira corporativa internacional"/>
           </div>
           <div class="blog-card__body">
             <span class="blog-card__category">Carreira</span>
-            <h3>Doutorado fora não é só para quem quer ser professor: carreiras no setor privado</h3>
-            <p>Biotecnologia, consultoria, finanças, indústria farmacêutica — saiba como um doutorado no exterior abre portas no mercado corporativo internacional.</p>
+            <h3>Carreiras no Setor Privado com o Doutorado Fora</h3>
+            <p>Biotecnologia, consultoria, indústria farmacêutica: saiba como um PhD no exterior abre portas no mercado corporativo internacional.</p>
             <div class="blog-card__footer">
               <span class="blog-card__date">1 Fev, 2026</span>
-              <a href="#" class="blog-card__link">
-                Leia mais
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Artigo 7 Extra -->
+        <div class="blog-card" data-category="guia-inicial" style="display:none;" data-hidden>
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?auto=format&fit=crop&w=800&q=80" alt="Pesquisa"/>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Guia Inicial</span>
+            <h3>Como Escolher o País Ideal para o Seu Doutorado</h3>
+            <p>Um guia sobre o que considerar antes de tomar a decisão: língua, cultura e fomento.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__date">20 Jan, 2026</span>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Artigo 8 Extra -->
+        <div class="blog-card" data-category="bolsas" style="display:none;" data-hidden>
+          <div class="blog-card__image">
+            <img src="https://images.unsplash.com/photo-1571260899304-425dea57a14c?auto=format&fit=crop&w=800&q=80" alt="Estudo"/>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Bolsas</span>
+            <h3>10 Programas de Bolsas que Acabaram de Abrir</h3>
+            <p>Acompanhe a nossa lista atualizada de programas e deadlines para as inscrições mais populares.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__date">15 Jan, 2026</span>
+              <a href="#" class="blog-card__link">Leia mais <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
@@ -202,8 +284,13 @@
       </div>
 
       <!-- Botão carregar mais -->
-      <div class="text-center mt-48" data-reveal>
-        <button class="btn btn--outline-gold" style="border-color:var(--navy);color:var(--navy);" onclick="this.textContent='Em breve mais artigos...'">Carregar mais artigos</button>
+      <div id="noResults" class="text-center mt-48" style="display:none;">
+        <h3 style="color:var(--navy);">Nenhum artigo encontrado :/</h3>
+        <p style="color:var(--text-muted);margin-top:8px;">Tente pesquisar usando outros termos ou limpe os filtros.</p>
+      </div>
+
+      <div class="text-center mt-48" id="loadMoreContainer" data-reveal>
+        <button id="loadMoreBtn" class="btn btn--outline-gold" style="border-color:var(--navy);color:var(--navy);">Carregar mais artigos</button>
       </div>
     </div>
   </section>
