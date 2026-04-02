@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    PHD NO EXTERIOR — Design System
    Fonte: Manual de Marca + Briefing Web Design
    ============================================ */
@@ -1270,7 +1270,7 @@ p  { font-size: 1rem; line-height: 1.8; }
    ============================================ */
 .page-hero {
   background: var(--navy);
-  padding: 160px 0 80px;
+  padding: 160px 0 160px;
   text-align: center;
 }
 
@@ -2282,7 +2282,7 @@ p  { font-size: 1rem; line-height: 1.8; }
 
 /* Hero Article */
 .article-hero {
-  padding: 160px 0 80px;
+  padding: 160px 0 160px;
   background: var(--navy);
   color: var(--white);
   text-align: center;
@@ -2371,7 +2371,9 @@ p  { font-size: 1rem; line-height: 1.8; }
 /* Image */
 .article-image {
   max-width: 1000px;
-  margin: -60px auto 48px;
+  margin: -120px auto 48px;
+  min-height: 400px;
+  background: #eaddb6;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
