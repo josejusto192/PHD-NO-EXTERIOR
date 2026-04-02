@@ -404,3 +404,27 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// ==========================================
+// ARTIGO INTERNO: INTERATIVIDADE E PROGRESS BAR
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Reading Progress Bar (Indicador de leitura)
+  const progressBar = document.getElementById('progressBar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      const scrollPercent = scrollTop / (docHeight - winHeight);
+      const scrollPercentRounded = Math.round(scrollPercent * 100);
+      progressBar.style.width = scrollPercentRounded + '%';
+    });
+  }
+});
+
+// Função mock para os botões de compartilhamento
+function shareArticle() {
+  alert('Link copiado para a área de transferência! (Simulação da integração nativa)');
+}
