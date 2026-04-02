@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 2. FILTROS E BUSCA DE ARTIGOS ---
   const searchInput = document.getElementById('searchInput');
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const blogCards = document.querySelectorAll('.blog-grid .blog-card');
+  const blogCards = document.querySelectorAll('#blogGrid .blog-card');
   const resultsInfo = document.getElementById('resultsInfo');
   const visibleCountSpan = document.getElementById('visibleCount');
   const noResults = document.getElementById('noResults');
