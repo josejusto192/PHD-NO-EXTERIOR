@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Investimento em Pesquisa: Brasil x Exterior — O que os números revelam?" />
+  <title>Investimento em Pesquisa: Brasil x Exterior | PhD no Exterior</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="02%20-%20LOGOTIPO/LOGOTIPO%20REDUZIDO-01.png" />
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav__logo">
+          <img src="https://wmvubil4ztro699m.public.blob.vercel-storage.com/LOGO_HORIZONTAL_VARIA%C3%87%C3%83O.png" alt="PhD no Exterior" />
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="nav__cta">
+          <a href="servicos.html" class="btn btn--gold">Conheça os Serviços</a>
+        </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="nav__mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Contato</a>
+      <a href="servicos.html" class="btn btn--gold">Conheça os Serviços</a>
+    </div>
+  </header>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container" style="position:relative; z-index: 2;">
+      <div class="breadcrumb" style="justify-content:center; margin-bottom: 24px;">
+        <a href="index.html" style="color:var(--text-muted);">Home</a>
+        <span style="color:var(--text-muted);">›</span>
+        <a href="blog.html" style="color:var(--text-muted);">Blog</a>
+        <span style="color:var(--text-muted);">›</span>
+        <span style="color:var(--gold);">Destaque</span>
+      </div>
+      <span class="eyebrow" style="margin-bottom: 16px;">Pesquisa e Dados</span>
+      <h1>Investimento em Pesquisa: Brasil x Exterior — O que os números revelam?</h1>
+      <div class="article-meta">
+        <span>Por <strong>Vanessa Nefro</strong></span>
+        <span>•</span>
+        <span>12 de Março, 2026</span>
+        <span>•</span>
+        <span>Leitura de 6 min</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT WRAPPER -->
+  <section class="section section--white" style="padding-top: 0; position:relative;">
+    <div class="container">
+      
+      <!-- HERO IMAGE OVERLAP -->
+      <div class="article-image">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b6aee?auto=format&fit=crop&w=1200&q=80" alt="Livros e pesquisa acadêmica" />
+      </div>
+
+      <div class="article-wrapper">
+        
+        <!-- FLOTING SHARE BUTTONS -->
+        <aside class="share-buttons" data-reveal>
+          <span>Compartilhar</span>
+          <button title="Compartilhar no LinkedIn" onclick="shareArticle()"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></button>
+          <button title="Compartilhar no WhatsApp" onclick="shareArticle()"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
+          <button title="Copiar Link" onclick="shareArticle()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></button>
+        </aside>
+
+        <!-- MAIN ARTICLE CONTENT -->
+        <main class="article-main" data-reveal>
+          <article class="article-body">
+            <p>A decisão de buscar um mestrado, doutorado ou pós-doutorado em uma instituição estrangeira é, com frequência, motivada pela busca por excelência e infraestrutura adequada que permita produzir ciência com impacto real.</p>
+            
+            <h2>O abismo do financiamento</h2>
+            <p>Ao observar relatórios recentes da UNESCO e da OCDE, notamos que nações situadas no topo da inovação investem em média entre <strong>2,5% e 3,5% do seu Produto Interno Bruto (PIB)</strong> em pesquisa e desenvolvimento (P&D). Em países como Estados Unidos, Suíça e Alemanha, universidades de ponta possuem *endowments* (fundos patrimoniais) na casa dos bilhões, que permitem garantir total liberdade acadêmica aos pesquisadores.</p>
+
+            <div class="notice-box">
+              <strong>💡 Dica do Consultor:</strong> Muitos laboratórios nos EUA possuem financiamento direto de instituições como NSF ou NIH. Identificar de onde vem o fundo do laboratório pode mostrar o quão independente é a linha de pesquisa!
+            </div>
+
+            <blockquote>
+              "A distinção entre ter apenas livros e possuir um ecossistema completo de captação, incentivo e aceleração faz toda a diferença nos resultados de uma tese de doutorado."
+            </blockquote>
+
+            <h2>O impacto no aluno internacional</h2>
+            <p>Essa forte cultura de investimento resulta em programas robustos de financiamento estudantil. Diferente do Brasil, onde a bolsa muitas vezes mal cobre os custos mensais frente à inflação, o conceito de <em>Full Funding</em> no hemisfério norte geralmente abrange:</p>
+            <ul>
+              <li><strong>Tuition Waiver:</strong> Isenção total da anuidade da universidade (que muitas vezes passa de U$50.000 anuais).</li>
+              <li><strong>Stipend:</strong> Salário mensal como assistente de pesquisa (RA) ou ensino (TA).</li>
+              <li><strong>Health Insurance:</strong> Subsídio robusto para plano de saúde de qualidade.</li>
+              <li><strong>Grants extras:</strong> Valores adicionais fornecidos pelo departamento para cobrir viagens a congressos mundiais.</li>
+            </ul>
+
+            <h2>Reflexão para o futuro</h2>
+            <p>Muitos acadêmicos hesitam com o viés de "fuga de cérebros". Mas enxergar as universidades americanas e europeias como um <em>hub</em> revela a verdade: absorver conhecimentos globais de ponta utilizando a infraestrutura deles é essencial antes de aplicar ideias localmente, e abre janelas imensas tanto de Carreira Corporativa quanto no setor acadêmico.</p>
+
+            <p>Preparar uma aplicação com foco nas potências requer tempo, cartas de recomendação imbatíveis e um <em>Statement of Purpose</em> (SOP) claro. Comece hoje a traçar o caminho rumo ao exterior e usufrua de condições justas para a sua ciência.</p>
+          </article>
+
+          <!-- COMMENTS MOCKUP -->
+          <div class="article-comments">
+            <h3>Comentários (2)</h3>
+            <div class="comment-list">
+              <div class="comment-item">
+                <div class="comment-avatar">JB</div>
+                <div class="comment-content">
+                  <div class="comment-author">João Batista <span>• há 2 dias</span></div>
+                  <p>Incrível a diferença do stipend em contraste com a realidade das nossas bolsas brasileiras. Abre muito a mente ler sobre isso.</p>
+                  <a href="#">Responder</a>
+                </div>
+              </div>
+              <div class="comment-item">
+                <div class="comment-avatar">MT</div>
+                <div class="comment-content">
+                  <div class="comment-author">Mariana Torres <span>• há 5 dias</span></div>
+                  <p>Alguém recomendaria aplicar para a Europa ou EUA se a prioridade for trazer a família? Sei que a saúde nos EUA é cara...</p>
+                  <a href="#">Responder</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="comment-form-box">
+              <h4>Deixe seu comentário</h4>
+              <textarea placeholder="O que você achou do artigo?" rows="3"></textarea>
+              <button class="btn btn--gold">Publicar Comentário</button>
+            </div>
+          </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="article-sidebar" data-reveal>
+          
+          <!-- Widget: Autor -->
+          <div class="sidebar-widget widget-author">
+            <img src="https://wmvubil4ztro699m.public.blob.vercel-storage.com/foto-1.jpeg" alt="Vanessa Nefro" />
+            <h4>Vanessa Nefro</h4>
+            <p>Consultora de Admissões. Especialista em bolsas 100% financiadas em universidades de elite.</p>
+            <a href="sobre.html" class="widget-link">Ler biografia completa →</a>
+          </div>
+
+          <!-- Widget: Banner Promocional -->
+          <div class="sidebar-widget widget-banner">
+            <span class="eyebrow" style="color:var(--navy); text-align:center;">Material Gratuito</span>
+            <h4>Guia Definitivo<br/>do Personal Statement</h4>
+            <p>Descubra como estruturar a carta perfeita para a comissão avaliadora americana.</p>
+            <a href="servicos.html" class="btn btn--navy" style="width:100%; justify-content:center;">Acessar Agora</a>
+          </div>
+
+          <!-- Widget: Artigos Relacionados -->
+          <div class="sidebar-widget widget-related">
+            <h4>Você também pode gostar</h4>
+            <div class="related-list">
+              <a href="artigo-2.html" class="related-item">
+                <div class="img-box">
+                  <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=200&q=80" alt="Univ" />
+                </div>
+                <div class="txt-box">
+                  <h5>Por onde começar? O guia completo</h5>
+                  <span>5 de Março, 2026</span>
+                </div>
+              </a>
+              <a href="#" class="related-item">
+                <div class="img-box">
+                  <img src="https://images.unsplash.com/photo-1499856871958-5b9357676b62?auto=format&fit=crop&w=200&q=80" alt="Univ" />
+                </div>
+                <div class="txt-box">
+                  <h5>É possível viver apenas com a bolsa?</h5>
+                  <span>20 de Fev, 2026</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Widget: Tags -->
+          <div class="sidebar-widget widget-tags">
+            <h4>Tags Populares</h4>
+            <div class="tags-row">
+              <a href="#">Bolsas</a>
+              <a href="#">EUA</a>
+              <a href="#">Europa</a>
+              <a href="#">Funding</a>
+              <a href="#">GRE</a>
+              <a href="#">IELTS</a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div> <!-- fim .article-wrapper -->
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / YOUTUBE -->
+  <section class="section section--dark">
+    <!-- Resto da sessão mantida como no original -->
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;" data-reveal>
+        <div>
+          <span class="eyebrow">Canal no YouTube</span>
+          <h2 style="color:var(--white);margin-bottom:16px;">Conteúdo em vídeo toda semana</h2>
+          <p style="color:var(--text-muted);margin-bottom:28px;">Dicas, estratégias e histórias de alunos aprovados. Inscreva-se no canal e não perca nenhum conteúdo.</p>
+          <a href="https://www.youtube.com/@phdnoexterior9542" target="_blank" rel="noopener" class="btn btn--gold">
+            Acessar Canal no YouTube
+          </a>
+        </div>
+        <div>
+          <span class="eyebrow">Redes Sociais</span>
+          <h2 style="color:var(--white);margin-bottom:16px;">Conteúdo diário no Instagram e TikTok</h2>
+          <p style="color:var(--text-muted);margin-bottom:28px;">Dicas rápidas, bastidores e histórias de aprovação todos os dias.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/phdnoexterior" target="_blank" rel="noopener" class="btn btn--outline-gold">Instagram</a>
+            <a href="https://www.tiktok.com/@phdnoexterior" target="_blank" rel="noopener" class="btn btn--outline-gold">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="https://wmvubil4ztro699m.public.blob.vercel-storage.com/LOGO_HORIZONTAL_VARIA%C3%87%C3%83O.png" alt="PhD no Exterior" />
+          <p>Consultoria especializada em bolsas de mestrado, doutorado e pós-doutorado nos EUA, Europa e Canadá.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 PhD no Exterior — Pós-Graduação Internacional. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

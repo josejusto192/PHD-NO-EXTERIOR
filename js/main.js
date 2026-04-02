@@ -247,3 +247,184 @@ if (heroStats.length > 0 && 'IntersectionObserver' in window) {
 
   if (heroStats[0]) statsObserver.observe(heroStats[0].closest('.hero__stats') || heroStats[0]);
 }
+
+// =======================================================
+// LÓGICA DO BLOG (SLIDER, FILTROS, BUSCA)
+// =======================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // --- 1. SLIDER DE DESTAQUES ---
+  const sliderContainer = document.querySelector('.featured-slider');
+  const slides = document.querySelectorAll('.featured-slide');
+  const btnPrev = document.querySelector('.slider-btn.prev');
+  const btnNext = document.querySelector('.slider-btn.next');
+  const dotsContainer = document.querySelector('.slider-dots');
+
+  if (sliderContainer && slides.length > 0) {
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let autoSlideInterval;
+
+    // Criar dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = document.querySelectorAll('.dot');
+
+    const updateSlider = () => {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
+          dots[index].classList.add('active');
+        } else {
+          slide.classList.remove('active');
+          dots[index].classList.remove('active');
+        }
+      });
+    };
+
+    const goToSlide = (index) => {
+      currentSlide = index;
+      updateSlider();
+      resetInterval();
+    };
+
+    const nextSlide = () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    };
+
+    const prevSlide = () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    };
+
+    if (btnNext) btnNext.addEventListener('click', () => { nextSlide(); resetInterval(); });
+    if (btnPrev) btnPrev.addEventListener('click', () => { prevSlide(); resetInterval(); });
+
+    const startInterval = () => { autoSlideInterval = setInterval(nextSlide, 6000); };
+    const resetInterval = () => { clearInterval(autoSlideInterval); startInterval(); };
+    startInterval();
+  }
+
+  // --- 2. FILTROS E BUSCA DE ARTIGOS ---
+  const searchInput = document.getElementById('searchInput');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const blogCards = document.querySelectorAll('.blog-grid .blog-card');
+  const resultsInfo = document.getElementById('resultsInfo');
+  const visibleCountSpan = document.getElementById('visibleCount');
+  const noResults = document.getElementById('noResults');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  let currentFilter = 'all';
+  let searchTerm = '';
+  // Limitar número de artigos visíveis para o "Carregar Mais"
+  let articlesLimit = 6; 
+
+  if (blogCards.length > 0) {
+    const filterArticles = () => {
+      let visibleCount = 0;
+      searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+
+      blogCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const category = card.getAttribute('data-category') || '';
+        
+        const matchesFilter = currentFilter === 'all' || category === currentFilter;
+        const matchesSearch = title.includes(searchTerm);
+
+        // A checagem de "hidden" será baseada no limite atual
+        if (matchesFilter && matchesSearch) {
+          if (visibleCount < articlesLimit) {
+            card.classList.remove('hide');
+          } else {
+            card.classList.add('hide'); 
+            // Eles dão match, mas passam do limite = são ocultos ("escondidos pelo paginador")
+          }
+          visibleCount++;
+        } else {
+          card.classList.add('hide');
+        }
+      });
+
+      // Atualizar contadores
+      const showingNow = Math.min(visibleCount, articlesLimit);
+      
+      if (resultsInfo && visibleCountSpan) {
+        resultsInfo.style.display = 'block';
+        visibleCountSpan.textContent = showingNow;
+      }
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      if (loadMoreBtn) {
+        if (articlesLimit >= visibleCount) {
+          loadMoreBtn.parentElement.style.display = 'none';
+        } else {
+          loadMoreBtn.parentElement.style.display = 'block';
+        }
+      }
+    };
+
+    // Eventos de filtro
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter') || 'all';
+        articlesLimit = 6; // reseta limit
+        filterArticles();
+      });
+    });
+
+    // Evento de busca
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        articlesLimit = 6; // reseta limit
+        filterArticles();
+      });
+    }
+
+    // Carregar Mais
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        articlesLimit += 6; // Aumenta limite
+        filterArticles();
+      });
+    }
+
+    // Inicialização
+    filterArticles();
+  }
+
+});
+
+// ==========================================
+// ARTIGO INTERNO: INTERATIVIDADE E PROGRESS BAR
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Reading Progress Bar (Indicador de leitura)
+  const progressBar = document.getElementById('progressBar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      const scrollPercent = scrollTop / (docHeight - winHeight);
+      const scrollPercentRounded = Math.round(scrollPercent * 100);
+      progressBar.style.width = scrollPercentRounded + '%';
+    });
+  }
+});
+
+// Função mock para os botões de compartilhamento
+function shareArticle() {
+  alert('Link copiado para a área de transferência! (Simulação da integração nativa)');
+}
